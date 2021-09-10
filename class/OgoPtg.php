@@ -51,8 +51,8 @@ class OgoPtg {
                     $i = 1;
                     foreach($arr as $k => $v) {
                         ?>
-                        <div class="img-ptg-content-item <?php if($i == 1) { echo 'act'; } ?>" data-item="<?php echo $i; ?>">
-                            <img src="<?php echo $v[0]; ?>" width="<?php echo $v[1]; ?>" height="<?php echo $v[2]; ?>" alt="<?php echo $title; ?>" class="img-ptg-img">
+                        <div class="img-ptg-content-item <?php if($i == 1) { echo 'act'; } ?>" data-item="<?php echo esc_html($i); ?>">
+                            <img src="<?php echo esc_html($v[0]); ?>" width="<?php echo esc_html($v[1]); ?>" height="<?php echo esc_html($v[2]); ?>" alt="<?php echo esc_html($title); ?>" class="img-ptg-img">
                         </div>
                         <?php
                         $i++;
@@ -65,7 +65,7 @@ class OgoPtg {
                 $i = 1;
                 foreach($arr as $k => $v) {
                     ?>
-                    <div class="img-ptg-content-hover-item <?php if($i == 1) { echo 'act'; } ?>" data-item="<?php echo $i; ?>"></div>
+                    <div class="img-ptg-content-hover-item <?php if($i == 1) { echo 'act'; } ?>" data-item="<?php echo esc_html($i); ?>"></div>
                     <?php
                     $i++;
                 }
